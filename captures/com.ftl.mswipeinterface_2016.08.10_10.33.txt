@@ -1,0 +1,33 @@
+TASK com.ftl.mswipeinterface id=180
+  ACTIVITY com.ftl.mswipeinterface/.MyActivity 1e214d89 pid=14464
+    Local Activity 6f4199d State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc en_US ?layoutDir sw768dp w1024dp h695dp 320dpi xlrg land finger -keyb/v/h -nav/h s.6}
+    FragmentManager misc state:
+      mActivity=com.ftl.mswipeinterface.MyActivity@6f4199d
+      mContainer=android.app.Activity$1@22aee12
+      mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=1027450 (29854 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{34bd09e3 V.E..... R....... 0,0-2048,1440}
+        android.widget.LinearLayout{16128fe0 V.E..... ........ 0,0-2048,1440}
+          android.view.ViewStub{34fdb299 G.E..... ......I. 0,0-0,0 #1020373}
+          android.widget.FrameLayout{17c5d95e V.E..... ........ 0,0-2048,1440 #1020002 android:id/content}
+            android.webkit.WebView{242c613f VFEDHVC. .F...... 0,0-2048,1440 #7f0c004f app:id/webview}
+    Looper (main, tid 1) {1c9f588b}
+      Message 0: { when=+10s442ms what=2 target=com.android.org.chromium.base.SystemMessageHandler }
+      (Total messages: 1, idling=false, quitting=false)
