@@ -144,7 +144,7 @@ $("#dispenser_items_TATA_TAKE_AWAY").hide();
                         $("#outside_items").show();
                         }
 
-                        $("#button_text").text("MEALS");
+                        $("#button_text").text("DINE IN");
                         $("#meals_img").attr("src", "img/hotmeals.png");
     }else {
                 if(item_images){
@@ -159,7 +159,7 @@ $("#dispenser_items_TATA_TAKE_AWAY").hide();
                 $("#meals_img").attr("src", "img/coffee.png");
     }
     }
-    else if($("#button_text1").text() == "MEALS"){
+    else if($("#button_text1").text() == "DINE IN"){
         if($("#button_text").text() == "SNACKS & DRINKS"){
               if(item_images){
                 $("#dispenser_items_TATA_TAKE_AWAY").hide();
@@ -195,7 +195,7 @@ $("#dispenser_items_TATA_TAKE_AWAY").hide();
            $("#take_away_items").show();
            }
 
-            $("#button_text").text("MEALS");
+            $("#button_text").text("DINE IN");
             $("#meals_img").attr("src", "img/hotmeals.png");
            }else{
            if(item_images){
@@ -231,7 +231,7 @@ $("#dispenser_items_TATA").hide();
         $("#dispenser_items").hide();
     }
 
-    $("#button_text1").text("MEALS");
+    $("#button_text1").text("DINE IN");
     $("#meals_img1").attr("src", "img/hotmeals.png");
 
     } else {
@@ -246,7 +246,7 @@ $("#dispenser_items_TATA").hide();
     $("#meals_img1").attr("src", "img/takeaway.png")
     }
 
-    }else if($("#button_text").text() == "MEALS"){
+    }else if($("#button_text").text() == "DINE IN"){
         if($("#button_text1").text() == "TAKE AWAY"){
             if(item_images){
             $("#dispenser_items_TATA_TAKE_AWAY").show();
@@ -255,7 +255,6 @@ $("#dispenser_items_TATA").hide();
             $("#take_away_items").show();
             $("#outside_items").hide();
             }
-
             $("#button_text1").text("SNACKS & DRINKS");
             $("#meals_img1").attr("src", "img/coffee.png");
         }else {
@@ -271,7 +270,7 @@ $("#dispenser_items_TATA").hide();
         }
     } else{
 
-        if($("#button_text1").text() == "MEALS"){
+        if($("#button_text1").text() == "DINE IN"){
                 if(item_images){
                  $("#dispenser_items_TATA").show();
                 $("#outside_items").hide();
@@ -289,7 +288,7 @@ $("#dispenser_items_TATA").hide();
                 $("#dispenser_items").hide();
                 $("#outside_items").show();
                 }
-                $("#button_text1").text("MEALS");
+                $("#button_text1").text("DINE IN");
                 $("#meals_img1").attr("src", "img/hotmeals.png");
                 }
     }
@@ -594,7 +593,7 @@ $("#proceed_order").click(function(){
 
     // If this is a test mode item, then don't do anything
     if (isTestModeItem(key)) {
-      $(tableDiv).append('<tr><td class="d_item">'+key+'</td><td>'+quantity+'</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>1</td></tr>');
+      $(tableDiv).append('<tr><td class="d_item">'+key+'</td><td>'+quantity+'</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>1</td></tr>');
       total_amount += 1;
       total_gst += 1;
       gst_percent += 1;

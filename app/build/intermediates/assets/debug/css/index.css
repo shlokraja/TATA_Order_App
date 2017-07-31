@@ -115,44 +115,70 @@ you cannot set the opacity of a background image */
 }
 
 #dispenser_items, #outside_items, #take_away_items, #dispenser_items_TATA_TAKE_AWAY {
-    height: 590px; /* hardcoding this because the relative sizes of the
+    height: 600px; /* hardcoding this because the relative sizes of the
   2 divs are different. */
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 1%;
+    padding-right: 0%;
 }
 
 #dispenser_items_TATA {
-    height: 590px; /* hardcoding this because the relative sizes of the
+    height: 600px; /* hardcoding this because the relative sizes of the
   2 divs are different. */
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 1%;
+    padding-right: 0%;
 }
 
 
-#selector_button {
+.selector {
 border: 1px solid #F1CF3F;
 border-radius: 19px;
-background-color: #4A4A4A;
+background-color: #fbb713;
 color: white;
 padding: 6px;
 margin: 0 50px;
 margin-right: 0px;
 width: 310px;
 height: 100px;
-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
+margin-top: 57px;
 }
 
-#selector_button1 {
+.selector2 {
 border: 1px solid #F1CF3F;
 border-radius: 19px;
-background-color: #4A4A4A;
+background-color: #fbb713;
+color: white;
+padding: 6px;
+margin: 0 260px;
+margin-right: 0px;
+width: 310px;
+height: 100px;
+margin-top: 57px;
+}
+
+.selector1 {
+border: 1px solid #F1CF3F;
+border-radius: 19px;
+background-color: #fbb713;
 color: white;
 padding: 6px;
 margin: 0 50px;
 margin-left: 0px;
 width: 310px;
 height: 100px;
-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
+margin-top: 57px;
+}
+
+.selector3 {
+border: 1px solid #F1CF3F;
+border-radius: 19px;
+background-color: #fbb713;
+color: white;
+padding: 6px;
+margin: 0 274px;
+margin-left: 0px;
+width: 290px;
+height: 100px;
+margin-top: 57px;
 }
 
 #button_text {
@@ -160,7 +186,8 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
     width: 70%;
     position: relative;
     top: 50%;
-    font-size: 20px;
+    color: #fff;
+    font-size: 27px;
     float: left;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -170,7 +197,8 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
     width: 70%;
     position: relative;
     top: 50%;
-    font-size: 20px;
+     color: #fff;
+    font-size: 27px;
     float: left;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -183,7 +211,8 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
     -webkit-transform: translateY(-50%);
 }
 #meals_img1 {
-    height: 50px;
+    height: 40px;
+    width: 42px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -199,12 +228,19 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
 }
 
 #order_summary #tablediv {
-    height: 64%;
-    border: 1px solid #3f4444;
-    margin-bottom: 8%;
-    /*background: rgba(0,0,0,0.19);*/
-    max-height: 500px;
-    overflow-y: scroll;
+height: 64%;
+border: 1px solid #3f4444;
+margin-bottom: 8%;
+/* background: rgba(0,0,0,0.19); */
+/* max-height: 500px; */
+border-radius: 20px;
+padding-top: 15px;
+}
+
+#order_summary table {
+
+background: rgba(255, 255, 255, 0)!important;
+border-radius: 15px;
 }
 
 #order_summary table {
@@ -218,27 +254,32 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
 }
 
 #order_summary table thead th {
-    border-bottom: 1px solid #3f4444;
-    font-size: 20px;
-    color: #6b6b6b;
-    font-weight: normal;
-    text-align: center;
-    background-color: none;
+border-bottom: 1px solid #3f4444;
+font-size: 20px;
+padding: 0px;
+padding-left: 7px;
+padding-bottom: 12px;
+color: #6b6b6b;
+font-weight: normal;
+text-align: center;
+background-color: none;
 }
+
 
 #order_summary table tbody tr {
     font-size: 20px;
 }
 
 #order_summary table tbody td {
+    background-color:#A9A9A9;
     color: #333;
-    text-align: center !important;
+    text-align: center ;
     font-size: 18px;
 }
 
 #order_summary table tbody td.d_item, #checkout_table table tbody td.d_item {
     font-size: 15px;
-    text-align: left;
+    text-align: left!important;
     font-weight:normal;
 }
 
@@ -257,12 +298,13 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
 
 
 #order_summary h3 {
-    color: #43b02a;
+    color: #000;
     font-size: 30px;
     margin-top: 5%;
     background-color: white;
     border: 2px solid #3f4444;
     border-radius: 30px;
+    border-color: #fbb713;
     font-family: "Roboto-Medium" !important;
     /* font-weight: bold; */
     margin-left: 5%;
@@ -283,7 +325,7 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
 }
 
 #total_amount {
-    color: #43b02a;
+    color: #000;
     font-size: 20px;
     margin-bottom: 10%;
 }
@@ -305,9 +347,9 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
     border-radius: 7px;
 
     font-family: 'Roboto-Medium' !important;;
-    color: #ffffff;
+    color: #fff;
     font-size: 20px;
-    background: #43b02a;
+    background: #fbb713;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
 }
@@ -361,8 +403,8 @@ box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.50);
 
 .non-veg {
     color:black !important;
-    box-shadow: inset 0px 0px 1px 5px #E16459 !important;
-    border: 1px solid #C55A4D;
+    box-shadow: inset 0px 0px 1px 5px #ffcb31 !important;
+    border: 1px solid #ffcb31;
     border-width:thick;
 }
 
@@ -449,7 +491,7 @@ h3 {
 
 #quantity {
     font-size: 40px;
-    color: #43b02a;
+    color: #000;
     margin-left: 20px !important;
     margin-right: 20px !important;
     border: 1px solid #666;
@@ -519,9 +561,9 @@ h3 {
     border-radius: 30px;
 
 
-    color: #ffffff;
+    color: #fff;
     font-size: 20px;
-    background: #43b02a;
+    background: #fbb713;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     font-weight: normal;
@@ -568,7 +610,7 @@ h3 {
 #main_alert_text {
     font-size: 20px;
     width: auto;
-    color: #43b02a;
+    color: #000;
     /* display: block !important; */
 }
 /*Pop up area ends */
@@ -584,13 +626,15 @@ h3 {
     border: 2px solid #FFFFFF;
     width: 75%;
     padding: 0px;
+    border-radius: 30px;
 }
 
 #finalOrder h3 {
-    color: #43b02a;
+    color: #000;
     font-size: 30px;
     background-color: white;
     border: 2px solid #3f4444;
+    border-color: #fbb713;
     border-radius: 30px;
     font-family: "Roboto-Medium" !important;
     /* font-weight: bold; */
@@ -618,13 +662,15 @@ padding-top: 0px;
 }
 
 #checkout_table {
-    display: inline-block;
-    height: 410px;
-    border: 1px solid #3f4444;
-    /*background: rgba(0,0,0,0.19);*/
-    width: 43%;
-    margin-left: 25px;
-    vertical-align: middle;
+display: inline-block;
+height: 410px;
+border: 1px solid #3f4444;
+/* background: rgba(0,0,0,0.19); */
+width: 43%;
+margin-left: 25px;
+vertical-align: middle;
+border-radius: 15px;
+padding-top: 10px;
 }
 
 #checkout_table table {
@@ -639,14 +685,18 @@ padding-top: 0px;
     background: #e9e9e9;
 }
 
+
 #checkout_table table thead th {
-    border-bottom: 1px solid #3f4444;
-    font-size: 20px;
-    color: #6b6b6b;
-    font-weight: normal !important;
-    text-align: center;
-    background-color: none;
+border-bottom: 1px solid #3f4444;
+font-size: 20px;
+color: #6b6b6b;
+font-weight: normal !important;
+text-align: center;
+background-color: none;
+padding: 0px;
+padding-bottom: 10px;
 }
+
 
 #checkout_table table tbody tr {
     font-size: 20px;
@@ -676,11 +726,12 @@ padding-top: 0px;
     margin: 0 auto;
     display: block;
     padding: 2%;
+    margin-left: 114px;
 }
 
 #total {
 
-    color: #43b02a;
+    color: #000;
 }
 
 .text {
@@ -707,10 +758,10 @@ padding-top: 0px;
     font-weight:normal;
     border-radius: 30px !important;
     position: inherit;
-    background: #43b02a none repeat scroll 0 0;
+    background: #fbb713 none repeat scroll 0 0;
     border-radius: 7px;
 
-    color: #ffffff;
+    color: #fff;
 
     font-size: 20px;
     height: 65px;
@@ -747,17 +798,20 @@ padding-top: 0px;
     padding: 0px;
     background: #e9e9e9;
     border: 2px solid #FFFFFF;
+    border-color: #fbb713;
     top: 70px !important;
     width: 60%;
+    height: 596px;
 }
 
 #cash_checkout .title {
     text-align: center;
-    color: #43b02a;
+    color: #000;
     font-size: 30px;
     margin-top: 5%;
     background-color: #e9e9e9;
-    border: 2px solid #3f4444;
+    border: 2px solid #9B9B9B;
+    border-color: #fbb713;
     border-radius: 30px;
     font-family: "Roboto-Medium" !important;
     /* font-weight: bold; */
@@ -776,7 +830,6 @@ padding-top: 0px;
 #cash_checkout .payment_area {
     height: 350px;
     margin: 20px;
-    border: 2px solid #9B9B9B;
     overflow: hidden;
 }
 
@@ -791,7 +844,7 @@ padding-top: 0px;
     height: 37%;
     padding-top: 7%;
     font-size: 42px;
-    color: #43b02a;
+    color: #000;
 }
 
 #cash_checkout .payment_area .payment_text {
@@ -800,24 +853,23 @@ padding-top: 0px;
   padding-top: 10%;*/
     padding-bottom: 75px;
     font-size: 32px;
-    color: #43b02a;
+    color: #000;
 }
 
 #cash_checkout .payment_area .closing_text {
     text-align: center;
     background: #e9e9e9;
-    border-top: 2px solid #3f4444;
     height: 100%;
     font-size: 30px;
     padding-top: 3%;
-    color: #43b02a;
+    color: #000;
 }
 
 #cash_checkout .sides {
     background: #e9e9e9;
     /*border-top: 2px solid #FFFFFF;*/
     font-size: 30px;
-    color: #43b02a;
+    color: #000;
     overflow: auto;
 }
 
@@ -840,17 +892,19 @@ padding-top: 0px;
     padding: 0px;
     background: #e9e9e9;
     border: 2px solid #FFFFFF;
+    border-color: #fbb713;
     top: 50px !important;
     width: 69%;
 }
 
 #card_success .title {
     text-align: center;
-   color: #43b02a;
+   color: #000;
    font-size: 30px;
      margin-top: 5%;
       background-color: white;
       border: 2px solid #3f4444;
+      border-color: #fbb713;
        border-radius: 30px;
         font-family: "Roboto-Medium" !important;
         /* font-weight: bold; */
@@ -866,6 +920,7 @@ padding-top: 0px;
     height: 300px;
     margin: 50px 80px;
     border: 2px solid #9B9B9B;
+    border-color: #fbb713;
     overflow: hidden;
 }
 
@@ -880,7 +935,7 @@ padding-top: 0px;
     height: 37%;
     padding-top: 7%;
     font-size: 42px;
-    color: #43b02a;
+    color: #000;
 }
 
 #card_success .payment_area .payment_text {
@@ -888,13 +943,14 @@ padding-top: 0px;
     height: 75%;
     padding-top: 80px;
     font-size: 32px;
-    color: #43b02a;
+    color: #000;
 }
 
 #card_success .payment_area .closing_text {
     text-align: center;
    background: #e9e9e9;
     border-top: 2px solid #3f4444;
+    border-color: #fbb713;
     height: 25%;
     font-size: 30px;
     padding-top: 8px;
@@ -903,8 +959,9 @@ padding-top: 0px;
 #card_success .sides {
     background: #e9e9e9;
     border-top: 2px solid #FFFFFF;
+    border-color: #fbb713;
     font-size: 34px;
-    color: #43b02a;
+    color: #000;
     overflow: auto;
 }
 
@@ -926,17 +983,18 @@ padding-top: 0px;
     padding: 0px;
   background: #e9e9e9;
     border: 2px solid #FFFFFF;
+    border-color: #fbb713;
     top: 50px !important;
     width: 69%;
 }
 
 #card_failure .title {
         /*/*border-bottom: 1px solid #F5A623;*/
-        color: #43b02a;
+        color: #000;
         font-size: 30px;
         margin-top: 5%;
         background-color: white;
-
+        border-color: #fbb713;
         border-radius: 30px;
         font-family: "Roboto-Medium" !important;
         /* font-weight: bold; */
@@ -954,6 +1012,8 @@ padding-top: 0px;
     height: 303px;
     margin: 50px 80px;
     border: 2px solid #9B9B9B;
+    border-color: #fbb713;
+    border-color: #fbb713;
     overflow: hidden;
 }
 
@@ -962,14 +1022,14 @@ padding-top: 0px;
     /* height: 75%;
     padding-top: 69px;*/
     font-size: 32px;
-    color: #43b02a;
+    color: #000;
     /* margin-bottom: 0px; */
 }
 
 #card_failure .payment_area .next_line {
     text-align: center;
     font-size: 32px;
-    color: #43b02a;
+    color: #000;
     /*height: 60px;*/
 }
 
@@ -977,16 +1037,17 @@ padding-top: 0px;
     text-align: center;
   background: #e9e9e9;
     border-top: 2px solid #3f4444;
+    border-color: #fbb713;
     height: 25%;
     font-size: 30px;
     padding-top: 8px;
-    color:#43b02a;
+    color:#000;
 }
 
 #card_failure .sides {
    background: #e9e9e9;
     font-size: 34px;
-    color: #F5A623;
+    color: #000;
     overflow: auto;
 }
 
@@ -1013,9 +1074,9 @@ padding-top: 0px;
         -webkit-border-radius: 7px;
         -moz-border-radius: 7px;
         border-radius: 30px;
+        border-color: #fbb713;
 
-
-        color: #ffffff;
+        color: #000;
         font-size: 20px;
         background: #43b02a;
         padding: 10px 20px 10px 20px;
@@ -1026,9 +1087,10 @@ padding-top: 0px;
 
 /*Card checkout area */
 #card_checkout {
-    padding: 0px;
+    padding: 10px;
     background: #E9E9E9;
     border: 2px solid #FFFFFF;
+    border-color: #fbb713;
     top: 50px !important;
     width: 69%;
 }
@@ -1036,11 +1098,12 @@ padding-top: 0px;
 #card_chckout .title,#othersPayment .title {
     text-align: center;
     /*/*border-bottom: 1px solid #F5A623;*/
-    color: #43b02a;
+    color: #000;
     font-size: 30px;
     margin-top: 5%;
     background-color: white;
     border: 2px solid #3f4444;
+    border-color: #fbb713;
     border-radius: 30px;
     font-family: "Roboto-Medium" !important;
     /* font-weight: bold; */
@@ -1059,7 +1122,7 @@ padding-top: 0px;
 #card_checkout .payment_area .savings_text {
     text-align: center;
     font-size: 15px;
-    color: #43b02a;
+    color: #000;
 }
 
 #card_checkout video {
@@ -1086,7 +1149,7 @@ padding-top: 0px;
 
     color: #ffffff;
     font-size: 20px;
-    background: #43b02a;
+    background: #fbb713;
     padding: 10px 20px 10px 20px;
     margin-top: 30%;
     text-decoration: none;
@@ -1096,7 +1159,7 @@ padding-top: 0px;
     /*background: #303030;*/
     border-top: 2px solid #FFFFFF;
     font-size: 20px;
-    color: #43b02a;
+    color: #000;
     overflow: auto;
 }
 
@@ -1276,30 +1339,34 @@ padding-top: 0px;
         }
 
     .menu_TATA li {
-            border-width: 1px;
-            border-radius: 15px;
-            margin: 4px 10px;
-            width: 44%;
-            height: 200px;
-            box-shadow: inset 0px 0px 44px 12px #6F6F6F;
-            color: white;
-            cursor: pointer;
-            float: left;
-            list-style: none;
-            padding: 6px;
+border-width: 0px;
+border-radius: 15px;
+margin: 20px 13px;
+width: 34%;
+height: 166px;
+box-shadow: inset 0px 0px 44px 12px #6F6F6F;
+color: white;
+cursor: pointer;
+float: left;
+list-style: none;
+padding: 6px;
+margin-left: 83px;
+}
     }
     .menu_TATA_TAKE_AWAY li {
-            border-width: 1px;
-            border-radius: 15px;
-            margin: 4px 10px;
-            width: 44%;
-            height: 200px;
-            box-shadow: inset 0px 0px 44px 12px #6F6F6F;
-            color: white;
-            cursor: pointer;
-            float: left;
-            list-style: none;
-            padding: 6.5px;
+border-width: 0px;
+border-radius: 15px;
+margin: 20px 13px;
+width: 34%;
+height: 166px;
+box-shadow: inset 0px 0px 44px 12px #6F6F6F;
+color: white;
+cursor: pointer;
+float: left;
+list-style: none;
+padding: 6px;
+margin-left: 83px;
+}
     }
 
 
@@ -1556,7 +1623,7 @@ font-family: 'Roboto-Medium';
 font-weight: normal;
 border-radius: 30px !important;
 position: inherit;
-background: #43b02a none repeat scroll 0 0;
+background: #fbb713 none repeat scroll 0 0;
 border-radius: 7px;
 color: #ffffff;
 font-size: 20px;
@@ -1567,5 +1634,5 @@ width: 35%;
 margin-right: 10px;
 }
 button:hover, button:focus, .button:hover, .button:focus {
-background-color: #43b02a !important;
+background-color: #fbb713 !important;
 }

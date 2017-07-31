@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/shlok/Desktop/manimaran/MSwipeInterface/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher2.png",
+        "source": "/home/shlok/Desktop/manimaran/MSwipeInterface/app/src/main/res/mipmap-hdpi/ic_launcher2.png"
+    },
+    {
         "merged": "/home/shlok/Desktop/manimaran/MSwipeInterface/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
         "source": "/home/shlok/Desktop/manimaran/MSwipeInterface/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },

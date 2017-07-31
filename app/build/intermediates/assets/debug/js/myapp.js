@@ -341,6 +341,7 @@ socket.on('dispenser_empty', function (empty_flag)
         }
         else {
             $("#selector_button").hide();
+
         }
         if(SHOW_TAKE_AWAY) {
             $("#selector_button1").show();
@@ -445,6 +446,7 @@ function shouldItemBeVisible(item_id)
 }
 
 function handleStockCountData(data)
+
 {
     var stock_count = data;
     var dispenserDiv;
@@ -550,7 +552,9 @@ function handleStockCountData(data)
     }*/
 
     if(SHOW_SNACKS) {
+
         $("#selector_buttons").show();
+
     }
     else {
         $("#selector_buttons").hide();
@@ -791,19 +795,19 @@ function updateOrderSummary()
         {
             if (isTestModeItem(key))
             {
-                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + key + '</td><td>' + quantity + '</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + key + '</td><td>' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
             } else
             {
-                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + price_data[key]["name"] + '</td><td>' + quantity + '</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + price_data[key]["name"] + '</td><td>' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
             }
         } else
         {
-            $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>[' + price_data[key]["name"] + ']</td><td>' + quantity + '</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+            $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>[' + price_data[key]["name"] + ']</td><td>' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
         }
         if (coke_quantity)
         {
             var coke_price = (price_data[key]["coke_details"]["mrp"] * price_data[key]["coke_details"]["discount_percent"] / 100) * coke_quantity;
-            $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>+coke</td><td>' + coke_quantity + '</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>' + coke_price.toFixed(decimal_Count) + '</td></tr>');
+            $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>+coke</td><td>' + coke_quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + coke_price.toFixed(decimal_Count) + '</td></tr>');
             total_amount += coke_price;
         }
         $("#total_amount .rupee").show();
@@ -1044,32 +1048,17 @@ function pushOrder(mode, savings, mobile_num, creditCardNo, cardHolderName)
                 };
             } else
             {
-            if (price_data[item_id]["take_away"]) {
-                        order_to_send[item_id] = {
-                        "count": current_order[item_id][0],
-                        "price": price_data[item_id]["mrp"] * current_order[item_id][0],
-                        "heating_flag": false,
-                        "heating_reduction": price_data[item_id]["heating_reduction"],
-                        "condiment_slot": price_data[item_id]["condiment_slot"],
-                        "name": price_data[item_id]["name"],
-                        "restaurant_details": price_data[item_id]["restaurant_details"],
-                        "side_order": price_data[item_id]["side_order"],
-                        "veg": price_data[item_id]["veg"]
-            };
-
-            } else {
-                    order_to_send[item_id] = {
-                            "count": current_order[item_id][0],
-                            "price": price_data[item_id]["mrp"] * current_order[item_id][0],
-                            "heating_flag": price_data[item_id]["heating_reqd"],
-                            "heating_reduction": price_data[item_id]["heating_reduction"],
-                            "condiment_slot": price_data[item_id]["condiment_slot"],
-                            "name": price_data[item_id]["name"],
-                            "restaurant_details": price_data[item_id]["restaurant_details"],
-                            "side_order": price_data[item_id]["side_order"],
-                            "veg": price_data[item_id]["veg"]
-            };
-}
+                 order_to_send[item_id] = {
+                       "count": current_order[item_id][0],
+                       "price": price_data[item_id]["mrp"] * current_order[item_id][0],
+                       "heating_flag": price_data[item_id]["heating_reqd"],
+                       "heating_reduction": price_data[item_id]["heating_reduction"],
+                       "condiment_slot": price_data[item_id]["condiment_slot"],
+                       "name": price_data[item_id]["name"],
+                       "restaurant_details": price_data[item_id]["restaurant_details"],
+                       "side_order": price_data[item_id]["side_order"],
+                       "veg": price_data[item_id]["veg"]
+                            };
 
             }
             if (current_order[item_id][1])
@@ -1202,6 +1191,7 @@ function saveSettings()
     simpleStorage.set("item_images", $("#item_images").is(":checked"));
     item_images = $("#item_images").is(":checked");
 
+
     simpleStorage.set("SHOW_TAKE_AWAY", $("#show_take_away").is(":checked"));
     SHOW_TAKE_AWAY = $("#show_take_away").is(":checked");
 
@@ -1276,13 +1266,33 @@ function showBankSummary(saleAmount, saleCount, summaryDate)
 function snacksVisibility()
 {
     if (SHOW_SNACKS)
-    {
+    {   if(SHOW_TAKE_AWAY){
+        $("#selector_button").removeClass('selector2');
+          $("#selector_button").addClass('selector');
+            $("#selector_button").show();
+        }else{
+        $("#selector_button").removeClass('selector');
+        $("#selector_button").addClass('selector2');
         $("#selector_button").show();
+        }
     } else
     {
         $("#selector_button").hide();
     }
+    if(SHOW_TAKE_AWAY){
+        if(SHOW_SNACKS){
+            $("#selector_button1").addClass('selector1');
+            $("#selector_button1").show();
+        }else{
+            $("#selector_button1").addClass('selector3');
+            $("#selector_button1").show();
+        }
+
+    }else{
+        $("#selector_button1").hide();
+    }
 }
+
 
 function updateSavings(mobile_num, total_expenditure, total_savings)
 {
