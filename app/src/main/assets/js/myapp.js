@@ -218,6 +218,8 @@ function getItemDetails()
                 "restaurant_details": { "id": data[i]["r_id"],
                     "name": data[i]["r_name"],
                     "address": data[i]["r_address"],
+                    "sgst_percent": data[i]["r_cgst_percent"],
+                    "cgst_percent": data[i]["r_sgst_percent"],
                     "st_no": data[i]["r_st_no"],
                     "pan_no": data[i]["r_pan_no"],
                     "tin_no": data[i]["r_tin_no"]
