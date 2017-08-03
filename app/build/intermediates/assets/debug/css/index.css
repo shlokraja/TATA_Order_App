@@ -69,6 +69,11 @@ body {
     /* width: 1280px;*/
 }
 
+#others_payment_type {
+border-radius:15px;
+}
+
+
 /* Main area */
 #mainsection {
     /* width: 100%; */
@@ -211,7 +216,7 @@ margin-top: 57px;
     -webkit-transform: translateY(-50%);
 }
 #meals_img1 {
-    height: 40px;
+    height: 43px;
     width: 42px;
     position: relative;
     top: 50%;
@@ -265,6 +270,7 @@ text-align: center;
 background-color: none;
 }
 
+select option:hover{box-shadow:0 0 10px 100px #5897FB inset !important;color:#fff;cursor:pointer;}
 
 #order_summary table tbody tr {
     font-size: 20px;
@@ -273,7 +279,7 @@ background-color: none;
 #order_summary table tbody td {
     background-color:#A9A9A9;
     color: #333;
-    text-align: center ;
+    text-align: left ;
     font-size: 18px;
 }
 
@@ -285,6 +291,42 @@ background-color: none;
 
 #order_summary table tr:nth-of-type(even) {
     background: rgba(0,0,0,0.15);
+}
+
+
+#header_price {
+text-align: left !important;
+}
+.d_item_take{
+min-width:30px!important;
+max-width:30px!important;
+min-height:30px!important;
+max-height:30px!important;
+height:30px!important;
+}
+.d_item_dinein {
+min-width:30px!important;
+max-width:30px!important;
+min-height:30px!important;
+max-height:30px!important;
+height:30px!important;
+}
+
+.d_item_take_checkout{
+padding-right: 2px;
+min-width:30px!important;
+max-width:30px!important;
+min-height:30px!important;
+max-height:30px!important;
+height:30px!important;
+}
+.d_item_dinein_checkout {
+padding-right: 2px;
+min-width:30px!important;
+max-width:30px!important;
+min-height:30px!important;
+max-height:30px!important;
+height:30px!important;
 }
 
 #order_summary table img {
@@ -390,8 +432,8 @@ background-color: none;
 
 .veg {
     color: black !important;
-    box-shadow: inset 0px 0px 1px 5px #7ED321 !important;
-    border: 1px solid #81B746;
+    box-shadow: inset 0px 0px 1px 5px #ffcb31 !important;
+    border: 1px solid #ffcb31;
     border-width:thick;
 }
 
@@ -1078,7 +1120,7 @@ padding-bottom: 10px;
 
         color: #000;
         font-size: 20px;
-        background: #43b02a;
+        background: #fbb713;
         padding: 10px 20px 10px 20px;
         margin-top: 15%;
         text-decoration: none;
@@ -1562,10 +1604,18 @@ font-size:22px;
 	color:#848484;
 	}
 
+#checkout_th  {
+text-align: left !important;
+padding-left: 5px !important;
+}
 
 
 #order_summary table tbody td.d_item, #checkout_table table tbody td.d_item {
+
     font-size: 18px;
+}
+.checkout_qty {
+text-align: center !important;
 }
 
 #checkout_table table tbody td {

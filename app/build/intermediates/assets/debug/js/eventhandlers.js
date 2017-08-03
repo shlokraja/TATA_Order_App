@@ -610,7 +610,12 @@ $("#proceed_order").click(function(){
     var price = mrp_without_tax * quantity;
     total_amount += price;
     if (current_order[key][2] === "dispenser") {
-      $(tableDiv).append('<tr><td class="d_item">'+price_data[key]["name"]+'</td><td>'+quantity+'</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>'+price.toFixed(decimal_Count)+'</td></tr>');
+    if(price_data[key]["take_away"]){
+        $(tableDiv).append('<tr><td class="d_item">'+price_data[key]["name"]+'</td><td><img class="d_item_take_checkout" src="img/takeaway.png" /></td><td>'+quantity+'</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>'+price.toFixed(decimal_Count)+'</td></tr>');
+    }else{
+        $(tableDiv).append('<tr><td class="d_item">'+price_data[key]["name"]+'</td><td><img class="d_item_dinein_checkout" src="img/hotmeals.png" /></td><td>'+quantity+'</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>'+price.toFixed(decimal_Count)+'</td></tr>');
+    }
+
     } else {
       $(tableDiv).append('<tr><td>['+price_data[key]["name"]+']</td><td>'+quantity+'</td><td class="right_justified"><div class="rupee">'+CURRENCY_SYM+' </div>'+price.toFixed(decimal_Count)+'</td></tr>');
     }

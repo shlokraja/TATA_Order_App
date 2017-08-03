@@ -217,10 +217,13 @@ function getItemDetails()
                 "side_order": data[i]["side_order"],
                 "restaurant_details": { "id": data[i]["r_id"],
                     "name": data[i]["r_name"],
+                    "tin_no":data[i]["r_tin_no"],
                     "address": data[i]["r_address"],
+                    "entity": data[i]["r_entity"],
+                    "sgst_percent": data[i]["r_cgst_percent"],
+                    "cgst_percent": data[i]["r_sgst_percent"],
                     "st_no": data[i]["r_st_no"],
-                    "pan_no": data[i]["r_pan_no"],
-                    "tin_no": data[i]["r_tin_no"]
+                    "pan_no": data[i]["r_pan_no"]
                 },
                 "coke_details": { "id": data[i]["b_id"],
                     "name": data[i]["b_name"],
@@ -235,12 +238,12 @@ function getItemDetails()
                                     "address": data[i]["b_r_address"],
                                     "st_no": data[i]["r_st_no"],
                                     "pan_no": data[i]["r_pan_no"],
-                                    "tin_no": data[i]["b_r_tin_no"]
+                                    "tin_no": data[i]["r_tin_no"]
                                 }
                 },
                 "heating_reqd": data[i]["heating_required"],
- 		 "heating_reduction": data[i]["heating_reduction"],
-         	 "condiment_slot": data[i]["condiment_slot"],
+ 		        "heating_reduction": data[i]["heating_reduction"],
+         	    "condiment_slot": data[i]["condiment_slot"],
                 "stock_quantity": -1
             }
         }
@@ -798,7 +801,11 @@ function updateOrderSummary()
                 $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + key + '</td><td>' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
             } else
             {
-                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td class="d_item">' + price_data[key]["name"] + '</td><td>' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+            if(price_data[key]["take_away"]){
+                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>' + price_data[key]["name"] + '</td><td><img class="d_item_take" src="img/takeaway.png" /></td><td class="checkout_qty">' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+            }else{
+                $(tableDiv).append('<tr onclick=showPopup(' + key + ');><td><img src="img/edit.png" /></td><td>' + price_data[key]["name"] + '</td><td><img class="d_item_dinein" src="img/hotmeals.png" /></td><td class="checkout_qty">' + quantity + '</td><td ><div class="rupee">'+CURRENCY_SYM+' </div>' + price.toFixed(decimal_Count) + '</td></tr>');
+            }
             }
         } else
         {

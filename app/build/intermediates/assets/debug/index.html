@@ -54,8 +54,9 @@
                 <tr>
                     <th><img src="img/edit.png"/></th>
                     <th style="text-align:left !important">Item Name</th>
+                    <th> </th>
                     <th>Qty</th>
-                    <th width="90px">Price</th>
+                    <th id="header_price">Price</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -416,7 +417,8 @@
             <table>
                 <thead>
                 <tr>
-                    <th>Item Name</th>
+                    <th id="checkout_th">Item Name</th>
+                    <th> </th>
                     <th>Qty</th>
                     <th width="90px">Price</th>
                 </tr>
@@ -538,11 +540,9 @@
         <div class="payment_text">
             <select id="others_payment_type" name="options">
                 <option selected>--Select Payment Type--</option>
-                <option value="sodexocard" selected>Sodexo Card</option>
-                <option value="sodexocoupon" selected>Sodexo Coupon</option>
                 <option value="credit" selected>Credit</option>
                 <option value="gprscard" selected>GPRS Card</option>
-                <option value="Wallet" selected>Wallet</option>
+                <option value="Wallet" selected>Wallet(Paytm/Mobikwik)</option>
             </select>
         </div>
 
